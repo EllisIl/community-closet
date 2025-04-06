@@ -1,0 +1,13 @@
+.home-container {
+    background-color: #2e1a47;
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .home-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+  

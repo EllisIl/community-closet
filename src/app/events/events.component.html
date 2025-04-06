@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Upcoming Events</h2>
+
+  <div *ngFor="let event of events" class="event-card mb-4 p-3 border rounded">
+    <h3>{{ event.title }}</h3>
+    <p><strong>Type:</strong> {{ event.type }}</p>
+    <p><strong>Address:</strong> {{ event.address }}</p>
+    <p><strong>Time:</strong> {{ event.time | date: 'fullDate' }} at {{ event.time | date: 'shortTime' }}</p>
+  </div>
+</div>

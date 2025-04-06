@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Winter Clothing Drive",
+      "address": "123 Main St, Cityville",
+      "time": "2025-04-15T10:00:00",
+      "type": "Donation"
+    },
+    {
+      "id": 2,
+      "title": "Community Open House",
+      "address": "456 Elm St, Cityville",
+      "time": "2025-04-20T14:00:00",
+      "type": "Open House"
+    },
+    {
+      "id": 3,
+      "title": "Summer Clothing Drive",
+      "address": "789 Oak St, Cityville",
+      "time": "2025-05-05T12:00:00",
+      "type": "Donation"
+    }
+  ]
+  

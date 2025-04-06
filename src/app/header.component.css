@@ -1,0 +1,93 @@
+li {
+    list-style: none;
+}
+
+/* Logo styling */
+.logo {
+    width: 100px; /* Adjust width */
+    height: auto;
+    display: inline-block;
+  }
+  
+  /* Navbar styles */
+  .custom-navbar {
+    background: linear-gradient(to right, #0016e0, #2db8e2);
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Center all navbar content */
+  .navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ensure brand and nav items are properly aligned */
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: white !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Center nav items */
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Space out nav items */
+  .nav-item {
+    margin: 0 15px; /* Add equal spacing */
+  }
+  
+  /* Button styling */
+  .custom-btn-light {
+    background-color: white;
+    color: #4a00e0 !important;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-btn-light:hover {
+    background-color: #d1c4e9 !important;
+    color: black !important;
+  }
+  
+  .custom-btn-dark {
+    background-color: #222;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-btn-dark:hover {
+    background-color: black !important;
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .dropdown-item {
+    color: #4a00e0 !important;
+    font-weight: bold;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #4a00e0;
+    color: white !important;
+  }
+  

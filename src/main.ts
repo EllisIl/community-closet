@@ -1,6 +1,22 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { ReservationsComponent } from './app/reservations/reservations.component';
+import { EventsComponent } from './app/events/events.component';
+import { DonationsComponent } from './app/donations/donations.component';
+import { NewsComponent } from './app/news/news.component';
+import { PhotosComponent } from './app/photos/photos.component';
+import { HomeComponent } from './app/home/home.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter([
+      { path: 'reservations', component: ReservationsComponent },
+      { path: 'events', component: EventsComponent},
+      { path: 'donations', component: DonationsComponent},
+      { path: 'news', component: NewsComponent},
+      { path: 'photos', component: PhotosComponent},
+      { path: '', component: HomeComponent }
+    ])
+  ]
+}).catch(err => console.error(err));
