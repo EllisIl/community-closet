@@ -1,4 +1,5 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';  // Import HttpClientModule
 import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import { ReservationsComponent } from './app/reservations/reservations.component';
@@ -10,12 +11,13 @@ import { HomeComponent } from './app/home/home.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
+    HttpClientModule,  // Add HttpClientModule here
     provideRouter([
       { path: 'reservations', component: ReservationsComponent },
-      { path: 'events', component: EventsComponent},
-      { path: 'donations', component: DonationsComponent},
-      { path: 'news', component: NewsComponent},
-      { path: 'photos', component: PhotosComponent},
+      { path: 'events', component: EventsComponent },
+      { path: 'donations', component: DonationsComponent },
+      { path: 'news', component: NewsComponent },
+      { path: 'photos', component: PhotosComponent },
       { path: '', component: HomeComponent }
     ])
   ]

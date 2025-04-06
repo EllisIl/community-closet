@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { DonationCounterComponent } from '../donation-counter/donation-counter.component';
 
 @Component({
   selector: 'cc-donations',
-  imports: [],
+  imports: [DonationCounterComponent],
   templateUrl: './donations.component.html',
   styleUrl: './donations.component.css'
 })

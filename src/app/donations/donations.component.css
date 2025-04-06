@@ -1,0 +1,65 @@
+/* Custom styles for donations page */
+.donations-container {
+    padding: 20px;
+    background-color: #f4f7fa; /* Light background for the whole page */
+  }
+  
+  .donations-container h1 {
+    font-size: 2rem;
+    color: #2db8e2; /* Bright blue color */
+  }
+  
+  .donations-container p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .card {
+    background-color: #ffffff; /* White background for each card */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for cards */
+    margin-bottom: 15px;
+  }
+  
+  .custom-card .card-title {
+    background-color: #4a00e0; /* Purple header for each card */
+    color: white;
+    font-size: 1.2rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .custom-card .card-body {
+    color: #555;
+    padding: 15px;
+  }
+  
+  .custom-btn-light {
+    background-color: white;
+    color: #4a00e0 !important;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-btn-light:hover {
+    background-color: #d1c4e9 !important;
+    color: black !important;
+  }
+  
+  .text-primary {
+    color: #2db8e2 !important;
+  }
+  
+  .btn-info {
+    background-color: #4a00e0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-info:hover {
+    background-color: #2db8e2;
+  }
+  
