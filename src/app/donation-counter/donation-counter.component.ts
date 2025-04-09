@@ -19,11 +19,16 @@ export class DonationCounterComponent implements OnInit {
   }
 
   fetchDonationData(): void {
-    // Ideally, replace this with an actual API call
-    this.http.get<any>('donations.json').subscribe((data) => {
-      // Assuming the total donated pounds are stored in data.totalPounds
-      this.totalPounds = data.totalPounds || 0;
+    this.http.get<any>('http://localhost:3000/api/donations').subscribe({
+      next: (data) => {
+        this.totalPounds = data.pounds
+        console.log(data.pounds)
+      },
+      error: (err) => {
+        console.error('HTTP error:', err);
+      }
     });
+    
   }
   increment(): void {
     this.totalPounds += 1;
