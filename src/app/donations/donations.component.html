@@ -1,5 +1,11 @@
 <div class="container mt-5 donations-container">
-    <app-donation-counter></app-donation-counter>
+  <!-- donations.component.html -->
+<div>
+  <h1>Donation Counter</h1>
+  <p>Total Donation: {{ totalPounds }} pounds</p>
+  <button (click)="addPound()">Add 1 Pound</button>
+</div>
+
 
     <h1 class="text-center text-primary">How Donations Work</h1>
     <p class="lead text-center">
