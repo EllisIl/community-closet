@@ -1,10 +1,33 @@
 <div class="container mt-5">
   <h2 class="text-center mb-4">Upcoming Events</h2>
 
+  <!-- Add new event form -->
+  <form (ngSubmit)="addEvent()" class="mb-4">
+    <input class="form-control mb-2" placeholder="Title" [(ngModel)]="newEvent.title" name="title" required />
+    <input class="form-control mb-2" placeholder="Type" [(ngModel)]="newEvent.type" name="type" required />
+    <input class="form-control mb-2" placeholder="Address" [(ngModel)]="newEvent.address" name="address" required />
+    <input class="form-control mb-2" type="datetime-local" [(ngModel)]="newEvent.time" name="time" required />
+    <button type="submit" class="btn btn-primary">Add Event</button>
+  </form>
+
+  <!-- Event list -->
   <div *ngFor="let event of events" class="event-card mb-4 p-3 border rounded">
-    <h3>{{ event.title }}</h3>
-    <p><strong>Type:</strong> {{ event.type }}</p>
-    <p><strong>Address:</strong> {{ event.address }}</p>
-    <p><strong>Time:</strong> {{ event.time | date: 'fullDate' }} at {{ event.time | date: 'shortTime' }}</p>
+    <div *ngIf="editId !== event.id">
+      <h3>{{ event.title }}</h3>
+      <p><strong>Type:</strong> {{ event.type }}</p>
+      <p><strong>Address:</strong> {{ event.address }}</p>
+      <p><strong>Time:</strong> {{ event.time | date: 'fullDate' }} at {{ event.time | date: 'shortTime' }}</p>
+      <button class="btn btn-sm btn-outline-primary me-2" (click)="startEdit(event)">Edit</button>
+      <button class="btn btn-sm btn-outline-danger" (click)="deleteEvent(event.id)">Delete</button>
+    </div>
+
+    <div *ngIf="editId === event.id">
+      <input class="form-control mb-2" [(ngModel)]="editEvent.title" name="editTitle" />
+      <input class="form-control mb-2" [(ngModel)]="editEvent.type" name="editType" />
+      <input class="form-control mb-2" [(ngModel)]="editEvent.address" name="editAddress" />
+      <input class="form-control mb-2" type="datetime-local" [(ngModel)]="editEvent.time" name="editTime" />
+      <button class="btn btn-sm btn-success me-2" (click)="saveEdit()">Save</button>
+      <button class="btn btn-sm btn-secondary" (click)="cancelEdit()">Cancel</button>
+    </div>
   </div>
 </div>

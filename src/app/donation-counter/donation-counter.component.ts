@@ -25,4 +25,8 @@ export class DonationCounterComponent implements OnInit {
       this.totalPounds = data.totalPounds || 0;
     });
   }
+  increment(): void {
+    this.totalPounds += 1;
+  }
+  
 }
